@@ -1,0 +1,329 @@
+@import './base.css';
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+html, body, #app{
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+#app {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+nav a {
+	color: black;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+nav li:hover {
+	transform: scale(1.2);
+	/* Increase the size on hover */
+	transition: transform 0.3s ease;
+	/* Add a smooth transition effect */
+}
+
+main {
+	margin-top: 60px;
+}
+
+.navbar {
+	background-color: #8b8b8bdc;
+	padding: 10px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50px;
+	max-width: 1200px;
+	width: 100%;
+	box-sizing: border-box;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+}
+
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+}
+
+li {
+	display: inline;
+	margin-right: 10px;
+	color: rgb(38, 33, 24);
+}
+
+router-link {
+	text-decoration: none;
+	color: rgb(22, 20, 15);
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+.carticon {
+	width: 25px;
+	height: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .cart-item-details {
+    flex-grow: 1;
+  }
+  
+  .cart-item-name {
+    font-weight: bold;
+  }
+  
+  .cart-item-price {
+    color: #888;
+  }
+  
+  .cart-empty-message {
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  .cart-total {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .cart-full-count {
+    margin-top: 5px;
+    color: #888;
+  }
+
+  .cart-btn {
+	margin-top: 40px;
+	padding: 10px 20px;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+	border-radius: 2px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+  }
+
+  .cart-btn:hover{
+	background-color: wheat;
+	color: black;
+	cursor: pointer;
+
+  }
+
+
+.main-title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 15px; 
+  }
+
+.subtitle {
+	text-align: center;
+	color: #555;
+}
+
+.text-area {
+	margin-top: 30px;
+	text-align: center;
+
+}
+
+.text-area h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+	background-color: grey;
+}
+
+.text-area p {
+	color: #777;
+}
+
+
+.product-item {
+	text-align: center;
+	cursor: pointer;
+}
+
+.product-item:hover {
+	transform: scale(1.2);
+	/* Increase the size on hover */
+	transition: transform 0.3s ease;
+	/* Add a smooth transition effect */
+}
+
+.product-image {
+	max-width: 100px;
+	margin-bottom: 10px;
+}
+
+.modal {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto;
+	padding: 10px;
+	border: 1px solid #888;
+	width: 20%;
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-image {
+	max-width: 100%;
+	height: auto;
+}
+
+.product-inline {
+	display: flex;
+	justify-content: space-around;
+}
+
+
+.product-container {
+	max-width: 1200px; 
+	margin: 0 auto; 
+	margin-bottom: 140px;
+  }
+  
+
+  /*Pre ProductList*/
+  .product-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+  }
+  
+  .product-item-list {
+	border: 1px solid #000000;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .product-image-list {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+  }
+  
+.product-details{
+	text-align: center;
+}
+
+  .product-details p {
+	margin: 0;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+  }
+  
+  .product-details button {
+	margin-top: 40px;
+	padding: 10px 20px;
+	text-align: center;
+	background-color: rgb(0, 0, 0);
+	border-radius: 2px;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+  }
+
+  .product-details button:hover{
+	background-color: wheat;
+	color: black;
+	cursor: pointer;
+
+  }
+
+
+  .footer {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+	position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.footer ul {
+    color: wheat;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+	
+}
+
+.footer li {
+	color: white;
+    margin: 0 15px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.notification {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: wheat;
+    color: black;
+    padding: 15px;
+    border-radius: 5px;
+  }
