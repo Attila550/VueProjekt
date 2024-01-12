@@ -8,7 +8,6 @@
         <li>
           <router-link to="/cart">
             <img src="/src/images/cart.png" alt="" class="carticon" />
-            <span class="cart-count">{{  }}</span>
           </router-link>
         </li>
       </ul>
@@ -16,17 +15,8 @@
   </template>
   
   <script>
-  import { useCartStore } from '../stores/cart';
-  
   export default {
     name: 'Navbar',
-    setup() {
-      const cartStore = useCartStore();
-  
-      return {
-        cartItemCount: cartStore.cartItemCount,
-      };
-    },
   };
   </script>
   
