@@ -26,26 +26,30 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
 import { useCartStore } from '../stores/cart';
 
-export default defineComponent({
-  setup() {
-    const cart = useCartStore().cart;
-    const removeFromCart = (product) => {
-      useCartStore().removeFromCart(product);
+export default {
+  data() {
+    return {
+      cart: [],
     };
-    const getTotal = () => {
-      return useCartStore().getTotal();
-    };
-    const getFullCount = () => {
-      return useCartStore().cartItemCount;
-    };
-    const updateQuantity = (item) => {
-      useCartStore().updateQuantity(item.product, item.quantity);
-    };
-
-    return { cart, removeFromCart, getTotal, getFullCount, updateQuantity };
   },
-});
+  methods: {
+    removeFromCart(product) {
+      useCartStore().removeFromCart(product);
+    },
+    getTotal() {
+      return useCartStore().getTotal();
+    },
+    getFullCount() {
+      return useCartStore().cartItemCount;
+    },
+    updateQuantity(item) {
+      useCartStore().updateQuantity(item.product, item.quantity);
+    },
+  },
+  created() {
+    this.cart = useCartStore().cart;
+  },
+};
 </script>
